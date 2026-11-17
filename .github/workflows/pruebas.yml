@@ -1,0 +1,25 @@
+﻿# IntegraciÃ³n continua: en cada push, GitHub instala Python y corre las pruebas.
+# IMPORTANTE: GitHub solo lee este archivo si estÃ¡ en la RAÃZ de tu fork:
+#   <tu fork>/.github/workflows/pruebas.yml
+# Por eso las Ã³rdenes se ejecutan dentro de la carpeta del proyecto.
+name: pruebas
+
+on: [push, pull_request]
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: PROYECTO_2/MONGE NAVARRO ALLISON GEORGINA
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Revisar estilo
+        run: ruff check .
+      - name: Correr pruebas
+        run: pytest -v
