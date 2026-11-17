@@ -8,7 +8,7 @@
 **Modalidad:** individual  
 **Curso:** MA-0321 Cálculo Diferencial e Integral · UCR Sede del Sur · II Ciclo 2026
 
-**Aplicación web:** _(pegar aquí el enlace de Streamlit Community Cloud)_
+**Aplicación web:** https://rapaces-kekoldi-monge.streamlit.app/
 
 ## Pregunta de decisión
 
